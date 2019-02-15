@@ -140,12 +140,13 @@ def draw_a_picture(point, n, color, window):
     rectangle = rg.Rectangle(rectangle_corner1, rectangle_corner2)
     rectangle.attach_to(window)
     for k in range(n):
-        corner_2 = rectangle_corner1.x + 160
-        end = rg.Point(rectangle_corner1.x + (k * corner_2 / ), rectangle_corner1.y)
+        end = rg.Point(rectangle_corner1.x + (k * 160 / (n - 1)), rectangle_corner1.y)
         line = rg.Line(point, end)
         line.attach_to(window)
-        if is_prime(k) is True:
+        if is_prime(k + 1) is False:
             line.color = color
+        else:
+            line.color = 'orange'
 
     window.render()
 
