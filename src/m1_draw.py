@@ -129,7 +129,9 @@ def is_prime(n):
 #
 def draw_a_picture(point, n, color, window):
 
-    pass
+    circle = rg.Circle(point, 100)
+    circle.attach_to(window)
+    window.render()
 
 
 main()
