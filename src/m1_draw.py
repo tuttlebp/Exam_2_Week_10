@@ -131,6 +131,14 @@ def draw_a_picture(point, n, color, window):
 
     circle = rg.Circle(point, 100)
     circle.attach_to(window)
+    rectangle_corner1_x = point.x - 80
+    rectangle_corner1_y = point.y -40
+    rectangle_corner1 = rg.Point(rectangle_corner1_x, rectangle_corner1_y)
+    rectangle_corner2_x = point.x + 80
+    rectangle_corner2_y = point.y + 40
+    rectangle_corner2 = rg.Point(rectangle_corner2_x, rectangle_corner2_y)
+    rectangle = rg.Rectangle(rectangle_corner1, rectangle_corner2)
+    rectangle.attach_to(window)
     window.render()
 
 
